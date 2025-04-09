@@ -15,7 +15,7 @@ export default function ResumePreview({ resume }) {
         <MarkdownRenderer content={resume} />
       </div>
 
-      <ResumePDF resume={resume} />
+      <ResumePDF resume={<MarkdownRenderer content={resume} />} />
 
       <Button variant="contained" color="secondary" className="mt-4">
         Edit & Regenerate
