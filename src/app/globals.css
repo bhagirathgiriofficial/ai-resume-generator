@@ -24,3 +24,39 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.markdown-body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.markdown-body h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.markdown-body h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body em {
+  font-style: italic;
+}
