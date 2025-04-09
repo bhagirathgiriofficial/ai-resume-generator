@@ -2,7 +2,7 @@
 
 import { Paper, Typography, Button } from "@mui/material";
 import ResumePDF from "./ResumePDF";
-import ReactMarkdown from "react-markdown";
+import { MarkdownRenderer } from "@/lib/markdownParser";
 
 export default function ResumePreview({ resume }) {
   return (
@@ -10,14 +10,16 @@ export default function ResumePreview({ resume }) {
       <Typography variant="h5" gutterBottom>
         Your AI-Generated Resume
       </Typography>
-      <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', whiteSpace: 'pre-line' }}>
-        <ReactMarkdown>{resume}</ReactMarkdown>
+      
+      <div className="prose max-w-none">
+        <MarkdownRenderer content={resume} />
       </div>
+
       <ResumePDF resume={resume} />
 
       <Button variant="contained" color="secondary" className="mt-4">
         Edit & Regenerate
       </Button>
-    </Paper >
+    </Paper>
   );
 }
