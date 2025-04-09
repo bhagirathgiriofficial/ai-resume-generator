@@ -8,6 +8,8 @@ export default function ResumeForm({ onGenerate }) {
     experience: "",
     skills: "",
     jobTitle: "",
+    education:"",
+    projects: "",
   });
 
   const handleChange = (e) => {
@@ -25,6 +27,9 @@ export default function ResumeForm({ onGenerate }) {
       <TextField fullWidth label="Experience" name="experience" onChange={handleChange} multiline rows={3} required />
       <TextField fullWidth label="Skills (comma-separated)" name="skills" onChange={handleChange} required />
       <TextField fullWidth label="Job Title" name="jobTitle" onChange={handleChange} required />
+      <TextField fullWidth label="Education" name="education" onChange={handleChange} required />
+      <TextField fullWidth label="Projects" name="projects" onChange={handleChange} required />
+      
 
       <Button variant="contained" color="primary" type="submit" fullWidth>
         Generate Resume
