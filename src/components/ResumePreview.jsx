@@ -10,18 +10,13 @@ export default function ResumePreview({ resume }) {
     <Paper elevation={3} className="p-6 mt-6 rounded-lg shadow-lg">
       <Typography variant="h5" gutterBottom>
         Your AI-Generated Resume
+        {resume}
       </Typography>
-
-      {/* ReactMarkdown should NOT be inside Typography */}
-      <div className="markdown-body">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{resume}</ReactMarkdown>
-      </div>
-
       <ResumePDF resume={resume} />
 
       <Button variant="contained" color="secondary" className="mt-4">
         Edit & Regenerate
       </Button>
-    </Paper>
+    </Paper >
   );
 }
